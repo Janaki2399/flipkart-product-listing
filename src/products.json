@@ -1,0 +1,58 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "brand": "METRONAUT",
+      "price": 296,
+      "discount": 67,
+      "image": "https://rukminim1.flixcart.com/image/495/594/kqttg280/t-shirt/8/s/t/m-mss21cn028b-metronaut-original-imag4rcnyvwmpfen.jpeg?q=50",
+      "size": ["S", "M", "L", "XL"],
+      "idealFor": "Men"
+    },
+    {
+      "id": 2,
+      "brand": "U.S. POLO ASSN.",
+      "price": 729,
+      "discount": 57,
+      "image": "https://rukminim1.flixcart.com/image/495/594/kctf0cw0/t-shirt/b/d/y/xl-usts6325-u-s-polo-association-original-imaftuht3jhuqpzg.jpeg?q=50",
+      "size": ["S", "M", "XL", "XXL"],
+      "idealFor": "Men"
+    },
+    {
+      "id": 3,
+      "brand": "PUMA",
+      "price": 800,
+      "discount": 54,
+      "image": "https://rukminim1.flixcart.com/image/495/594/kp2y2kw0/tight/r/b/o/s-84775703-puma-original-imag3e6scjaxrax2.jpeg?q=50",
+      "size": ["XS", "S", "M", "XL"],
+      "idealFor": "Women"
+    },
+    {
+      "id": 4,
+      "brand": "SCOTT INTERNATIONAL",
+      "price": 509,
+      "discount": 78,
+      "image": "https://rukminim1.flixcart.com/image/495/594/kk8mcnk0/t-shirt/d/b/j/m-scott-basic-scott-international-original-imafzmkssgs8bxmv.jpeg?q=50",
+      "size": ["3XL"],
+      "idealFor": "Men"
+    },
+    {
+      "id": 5,
+      "brand": "LIBAS",
+      "price": 923,
+      "discount": 61,
+      "image": "https://rukminim1.flixcart.com/image/495/594/kflftzk0/ethnic-set/m/b/z/xs-6321mj-pink-libas-original-imafwfypfwvzdhgb.jpeg?q=50",
+      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "idealFor": "Women"
+    },
+    {
+      "id": 6,
+      "brand": "Seven Rocks",
+      "price": 363,
+      "discount": 72,
+      "image": "https://rukminim1.flixcart.com/image/495/594/khmbafk0-0/t-shirt/w/j/s/xs-t322-blwh-seven-rocks-original-imafxhagtyj2xvpn.jpeg?q=50",
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "idealFor": "Men"
+    }
+  ]
+}
