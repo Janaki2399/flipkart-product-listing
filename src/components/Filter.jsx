@@ -1,3 +1,5 @@
+import { isFilterSelected } from "../util";
+
 export const Filter = ({ state, dispatch }) => {
   return (
     <div className="w-2/5 h-full pl-12">
@@ -14,9 +16,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_XS_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_XS_SIZE" })
+              checked={isFilterSelected(state.filter.size, "XS")}
+              value="XS"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             XS
@@ -27,9 +33,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_S_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_S_SIZE" })
+              checked={isFilterSelected(state.filter.size, "S")}
+              value="S"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             S
@@ -40,9 +50,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_M_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_M_SIZE" })
+              checked={isFilterSelected(state.filter.size, "M")}
+              value="M"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             M
@@ -53,9 +67,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_L_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_L_SIZE" })
+              checked={isFilterSelected(state.filter.size, "L")}
+              value="L"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             L
@@ -66,9 +84,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_XL_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_XL_SIZE" })
+              checked={isFilterSelected(state.filter.size, "XL")}
+              value="XL"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             XL
@@ -79,9 +101,13 @@ export const Filter = ({ state, dispatch }) => {
             <input
               type="checkbox"
               className="mr-2"
-              checked={state.filter.size.INCLUDE_XXL_SIZE}
-              onChange={() =>
-                dispatch({ type: "SELECT_SIZE", payload: "INCLUDE_XXL_SIZE" })
+              checked={isFilterSelected(state.filter.size, "XXL")}
+              value="XXL"
+              onChange={(e) =>
+                dispatch({
+                  type: "FILTER",
+                  payload: { value: e.target.value, type: "size" },
+                })
               }
             />
             XXL
@@ -94,11 +120,12 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.idealFor.INCLUDE_IDEAL_FOR_MEN}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.idealFor, "Men")}
+            value="Men"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_IDEAL_FOR",
-                payload: "INCLUDE_IDEAL_FOR_MEN",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "idealFor" },
               })
             }
           />
@@ -110,11 +137,12 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.idealFor.INCLUDE_IDEAL_FOR_WOMEN}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.idealFor, "Women")}
+            value="Women"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_IDEAL_FOR",
-                payload: "INCLUDE_IDEAL_FOR_WOMEN",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "idealFor" },
               })
             }
           />
@@ -127,11 +155,12 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_METRONAUT}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.brand, "METRONAUT")}
+            value="METRONAUT"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_METRONAUT",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
@@ -143,15 +172,16 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_US_POLO}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.brand, "U.S. POLO ASSN.")}
+            value="U.S. POLO ASSN."
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_US_POLO",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
-          U.S. POLO ASSN
+          U.S. POLO ASSN.
         </label>
       </div>
       <div className="flex">
@@ -159,11 +189,12 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_PUMA}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.brand, "Puma")}
+            value="PUMA"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_PUMA",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
@@ -175,11 +206,15 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_SCOTT_INTERNATIONAL}
-            onChange={() =>
+            checked={isFilterSelected(
+              state.filter.brand,
+              "SCOTT INTERNATIONAL"
+            )}
+            value="SCOTT INTERNATIONAL"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_SCOTT_INTERNATIONAL",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
@@ -191,11 +226,12 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_LIBAS}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.brand, "LIBAS")}
+            value="LIBAS"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_LIBAS",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
@@ -207,15 +243,16 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={state.filter.brand.INCLUDE_SEVEN_ROCKS}
-            onChange={() =>
+            checked={isFilterSelected(state.filter.brand, "SEVEN ROCKS")}
+            value="SEVEN ROCKS"
+            onChange={(e) =>
               dispatch({
-                type: "SELECT_BRAND",
-                payload: "INCLUDE_SEVEN_ROCKS",
+                type: "FILTER",
+                payload: { value: e.target.value, type: "brand" },
               })
             }
           />
-          SEVEN_ROCKS
+          SEVEN ROCKS
         </label>
       </div>
     </div>
