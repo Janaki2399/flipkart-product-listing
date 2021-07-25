@@ -189,7 +189,7 @@ export const Filter = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="mr-2"
-            checked={isFilterSelected(state.filter.brand, "Puma")}
+            checked={isFilterSelected(state.filter.brand, "PUMA")}
             value="PUMA"
             onChange={(e) =>
               dispatch({
